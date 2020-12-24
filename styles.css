@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding:0;
+  }
+  body{
+    font-family: 'Josefin Slab', serif;
+  }
+.container{
+  width: 100%;
+  height:100vh;
+  background: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.3)),url("https://upload.wikimedia.org/wikipedia/commons/8/8f/NativityChristmasLights2.jpg") center no-repeat;
+  background-size:cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  width:360px;
+  height:560px;
+
+  position:relative;
+  perspective: 1000px;
+
+}
+.left-side{
+  position:absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.7)),url("https://images2.imgbox.com/e0/69/DtWF9QkV_o.jpg") no-repeat;
+  background-size: cover;
+  background-position-x:0;
+  width:50%;
+  height: 100%;
+
+}
+.right-side{
+  position:absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.7)),url("https://images2.imgbox.com/99/49/EzXoikxx_o.jpg") no-repeat;
+  background-size: cover;
+    background-position-x:-180px;
+  width:50%;
+  height: 100%;
+
+}
+.left-image{
+  height: inherit;
+  margin-bottom: -100px;
+}
+.right-image{
+  height: inherit;
+  margin-bottom: -102px;
+}
+.backside{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+    background: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.3)),url("https://images2.imgbox.com/d9/5c/Tff9bu8L_o.jpg") center no-repeat;
+background-size: cover;
+  z-index:-1;
+  transform: translateZ(-300PX);
+  transition: z-index 0.4s step-end, transform 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  box-shadow: 1s;
+
+}
+.card:hover .left-side{
+  transform: rotatey(-360deg);
+  transform-origin: left;
+  transition: transform 1s;
+}
+.card:hover .right-side{
+  transform: rotatey(360deg);
+  transform-origin: right;
+  transition: transform 1s;
+}
+.card:hover .backside{
+  transform: translateZ(0);
+  z-index:1;
+  box-shadow: 50px 50px 100px #000 ;
+
+}
+.wish{
+  color:white;
+  font-size:35px;
+  margin: 20px 10px 20px 0;
+}
+.wish1{
+  color:white;
+  font-size:25px;
+  margin-right: 10px;
+}
+.story{
+  color:#fff;
+  font-size: 22px;
+
+}
+.sides{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-side{
+   text-align: right;
+  }
+
+@media (max-width:1028px) {
+  .container{
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.3)),url("https://upload.wikimedia.org/wikipedia/commons/8/8f/NativityChristmasLights2.jpg") center no-repeat;
+    background-size:cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    width:200px;
+    height:300px;
+
+  }
+  .story{
+    color:#fff;
+    font-size:14px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width:90%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
